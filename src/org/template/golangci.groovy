@@ -10,12 +10,14 @@ def call (String branch = 'main', String repoUrl, String gitPassword, String rep
  compilation = new codeCompilation()
  credScanning = new  cred_scanning()
  licenceScanning = new LicenceScanning()
+ bugAnalysis = new bugAnalysis()
 
 clean.call()
 clone.call(branch, repoUrl, gitPassword)
 compilation.call()
 credScanning(reportName)
 licenceScanning(reportFile)
+bugAnalysis()
   
 }
 
