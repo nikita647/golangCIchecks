@@ -2,7 +2,7 @@ package org.genric
 
 def call(String reportFile) {
     stage ('Licence Scanning'){
-        withCredentials([string(credentialsId: 'FOSSA_API_KEY', variable: 'FOSSA_KEY')]) { 
+        withCredentials([string(credentialsId: 'fossa_api_token', variable: 'FOSSA_KEY')]) { 
                     sh """
                     export FOSSA_API_KEY=${FOSSA_KEY}
                     fossa analyze
