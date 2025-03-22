@@ -11,6 +11,7 @@ def call (String branch = 'main', String repoUrl, String gitPassword, String rep
  credScanning = new  cred_scanning()
  licenceScanning = new LicenceScanning()
  bugAnalysis = new bugAnalysis()
+ StaticCodeAnalysis = new static_code_analysis()
 
 clean.call()
 clone.call(branch, repoUrl, gitPassword)
@@ -18,6 +19,7 @@ compilation.call()
 credScanning(reportName)
 licenceScanning(reportFile)
 bugAnalysis()
+StaticCodeAnalysis()
   
 }
 
