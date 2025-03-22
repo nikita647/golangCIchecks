@@ -1,6 +1,6 @@
 package org.genric
 
-def call(String FOSSA_KEY, String reportFile) {
+def call(String reportFile) {
     stage ('Licence Scanning'){
         withCredentials([string(credentialsId: 'FOSSA_API_KEY', variable: 'FOSSA_KEY')]) { 
                     sh """
