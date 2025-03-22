@@ -5,7 +5,7 @@ import org.golang.*
 
 def call(String branch = 'main', String repoUrl, String gitPassword='' ) {
 def clean = new cleanworkspace()
-def clone = new gitClone()
+def clone = new gitclone()
 def compilation = new codeCompilation()
 
 clean.call()
