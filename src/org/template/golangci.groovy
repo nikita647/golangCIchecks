@@ -1,0 +1,15 @@
+package org.template
+
+import org.common.*
+import org.golang.*
+
+def call(String branch = 'main', String repoUrl, String gitPassword='' ) {
+def clean = new cleanworkspace()
+def clone = new gitclone()
+def compilation = new codecompilation()
+
+clean.call()
+clone.call(branch, repoUrl, gitPassword)
+compilation.call()
+  
+}
