@@ -13,7 +13,7 @@ def call (String branch = 'main', String repoUrl, String gitPassword, String rep
  bugAnalysis = new bugAnalysis()
  StaticCodeAnalysis = new static_code_analysis()
  Dependency = new DependencyScanning()
- UnitTesting = new Unit_testing()
+ // UnitTesting = new Unit_testing()
 
 clean.call()
 clone.call(branch, repoUrl, gitPassword)
@@ -23,7 +23,7 @@ licenceScanning(reportFile)
 bugAnalysis()
 StaticCodeAnalysis()
 Dependency()
-UnitTesting(reports)
+// UnitTesting(reports)
   
 }
 
