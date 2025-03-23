@@ -4,7 +4,7 @@ import org.common.*
 import org.golang.*
 import org.genric.*
  
-def call (String branch = 'main', String repoUrl, String gitPassword, String reportName, String reportFile, String reports) {
+def call (String branch = 'main', String repoUrl, String gitPassword, String reportName, String reportFile) {
  clean = new cleanworkspace()
  clone = new gitclone()
  compilation = new codeCompilation()
