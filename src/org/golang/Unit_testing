@@ -1,0 +1,11 @@
+package org.golang
+
+def call(String reports) {
+  stage('Unit testing') {
+   sh """
+        mkdir -p ${reports}
+        go mod tidy
+        go test ./... -v > ${reports}/unit-test-report.txt
+    """
+  }
+}
